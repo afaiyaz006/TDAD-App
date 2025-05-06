@@ -2,8 +2,8 @@ package com.example.tdad_app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val primaryLight = Color(0xBE159F5F)
-val onPrimaryLight = Color(0xFFFFFFFF)
+val primaryLight = Color(0xDF16A63F)
+val onPrimaryLight = Color(0xFFFFFDFD)
 val primaryContainerLight = Color(0xFFC1EFAE)
 val onPrimaryContainerLight = Color(0xFF2A4F1F)
 val secondaryLight = Color(0xFF54634D)

@@ -1,11 +1,13 @@
 package com.example.tdad_app
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -16,18 +18,23 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.tdad_app.thirty_days_data.Entries
 import com.example.tdad_app.ui.theme.TDADAppTheme
-import com.example.tdad_app.R
+
+
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
@@ -37,7 +44,7 @@ class MainActivity : ComponentActivity() {
                         TopAppBar(
                             title = {
                                 Text(
-                                    text = "30 Days of Android App development",
+                                    text = " 30 Days of Android App development",
                                     style = MaterialTheme.typography.titleLarge,
                                     color = MaterialTheme.colorScheme.onPrimary
                                 )
@@ -52,8 +59,13 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier
                             .fillMaxSize()
                     ) {
+                        var isDarkTheme = isSystemInDarkTheme()
+                        var backgroundImage = painterResource(R.drawable.bg)
+                        if(isDarkTheme){
+                            backgroundImage= painterResource(R.drawable.bg_dark)
+                        }
                         Image(
-                            painter = painterResource(R.drawable.bg),
+                            painter = backgroundImage,
                             contentDescription = "Background Image",
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.matchParentSize()
@@ -70,7 +82,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DayCards(modifier: Modifier = Modifier) {
-    val itemsList = List(20) { "Item #$it" }
 
     LazyColumn(
         modifier = modifier
@@ -80,8 +91,9 @@ fun DayCards(modifier: Modifier = Modifier) {
     ) {
         items(Entries){ entry ->
             var visible by remember {
-                mutableStateOf(true)
+                mutableStateOf(false)
             }
+
             Card(
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                 colors = CardDefaults.cardColors(
@@ -95,12 +107,19 @@ fun DayCards(modifier: Modifier = Modifier) {
 
                 Text(
                     text = stringResource( entry.dayNumber),
-                    modifier=Modifier.padding(start=16.dp,end=16.dp,bottom=2.dp,top=16.dp)
-                )   
+                    modifier=Modifier.padding(
+                        start=16.dp,
+                        end=16.dp,
+                        bottom=2.dp,
+                        top=16.dp)
+                )
+
+
                 Text(
                     text = stringResource(entry.dayTitle),
                     style = MaterialTheme.typography.labelLarge,
-                    modifier=Modifier.padding(start=16.dp,end=16.dp,bottom=2.dp)
+                    modifier=Modifier.padding(start=16.dp,end=16.dp,bottom=2.dp),
+                    textAlign = TextAlign.Justify
                 )
                 Image(
                     painter= painterResource(entry.imageCode),
@@ -131,7 +150,7 @@ fun LightModePreview() {
                 TopAppBar(
                     title = {
                         Text(
-                            text = "\uD83D\uDCC5 \uD83D\uDCF130 Days of Android App development",
+                            text = "30 Days of Android App development",
                             style = MaterialTheme.typography.titleLarge,
                             color = MaterialTheme.colorScheme.onPrimary
                         )
@@ -149,7 +168,7 @@ fun LightModePreview() {
                 Image(
                     painter = painterResource(R.drawable.bg),
                     contentDescription = "Background Image",
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillHeight,
                     modifier = Modifier.matchParentSize()
                 )
 
@@ -169,7 +188,7 @@ fun DarkModePreview() {
                 TopAppBar(
                     title = {
                         Text(
-                            text = "\uD83D\uDCC5 \uD83D\uDCF130 Days of Android App development",
+                            text = "30 Days of Android App development",
                             style = MaterialTheme.typography.titleLarge,
                             color = MaterialTheme.colorScheme.onPrimary
                         )
@@ -185,7 +204,7 @@ fun DarkModePreview() {
                     .fillMaxSize()
             ) {
                 Image(
-                    painter = painterResource(R.drawable.bg),
+                    painter = painterResource(R.drawable.bg_dark),
                     contentDescription = "Background Image",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.matchParentSize()
