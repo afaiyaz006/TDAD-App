@@ -1,4 +1,4 @@
-package com.example.tdad_app.ui.theme
+package com.example.tdad_app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -33,15 +33,36 @@ class MainActivity : ComponentActivity() {
         setContent {
             TDADAppTheme {
                 Scaffold(
-                    modifier = Modifier.fillMaxSize(),
                     topBar = {
                         TopAppBar(
-                            title = { Text("30 Days of Android App development") }
+                            title = {
+                                Text(
+                                    text = "30 Days of Android App development",
+                                    style = MaterialTheme.typography.titleLarge,
+                                    color = MaterialTheme.colorScheme.onPrimary
+                                )
+                            },
+                            colors = TopAppBarDefaults.topAppBarColors(
+                                containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.8f) // Adjust alpha for transparency
+                            )
                         )
                     }
-                ) { innerPadding ->
-                    DayCards(modifier = Modifier.padding(innerPadding))
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    ) {
+                        Image(
+                            painter = painterResource(R.drawable.bg),
+                            contentDescription = "Background Image",
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.matchParentSize()
+                        )
+
+                        DayCards(modifier = Modifier.padding(it))
+                    }
                 }
+
             }
         }
     }
@@ -84,8 +105,8 @@ fun DayCards(modifier: Modifier = Modifier) {
                 Image(
                     painter= painterResource(entry.imageCode),
                     contentDescription = stringResource(entry.dayTitle),
-                    contentScale = ContentScale.FillWidth,
-                    modifier=Modifier.padding(start=16.dp,end=16.dp,bottom=16.dp).fillMaxWidth()
+                    contentScale = ContentScale.Crop,
+                    modifier=Modifier.padding(start=16.dp,end=16.dp,bottom=16.dp).fillMaxWidth().height(250.dp)
                 )
                 AnimatedVisibility(visible) {
                     Text(
@@ -108,12 +129,15 @@ fun GreetingPreview() {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text(
-                        text="30 Days of Android App development",
-                        style= MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.onPrimary) },
+                    title = {
+                        Text(
+                            text = "\uD83D\uDCC5 \uD83D\uDCF130 Days of Android App development",
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
+                    },
                     colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primary
+                        containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.8f) // Adjust alpha for transparency
                     )
                 )
             }
