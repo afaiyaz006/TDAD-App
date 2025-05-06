@@ -124,8 +124,46 @@ fun DayCards(modifier: Modifier = Modifier) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun LightModePreview() {
     TDADAppTheme {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = "\uD83D\uDCC5 \uD83D\uDCF130 Days of Android App development",
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.8f) // Adjust alpha for transparency
+                    )
+                )
+            }
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.bg),
+                    contentDescription = "Background Image",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.matchParentSize()
+                )
+
+                DayCards(modifier = Modifier.padding(it))
+            }
+        }
+
+    }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = true)
+@Composable
+fun DarkModePreview() {
+    TDADAppTheme(darkTheme = true) {
         Scaffold(
             topBar = {
                 TopAppBar(

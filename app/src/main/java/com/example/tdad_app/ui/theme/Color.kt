@@ -2,7 +2,7 @@ package com.example.tdad_app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val primaryLight = Color(0xFF080E08)
+val primaryLight = Color(0xFF148852)
 val onPrimaryLight = Color(0xFFFFFFFF)
 val primaryContainerLight = Color(0xFFC1EFAE)
 val onPrimaryContainerLight = Color(0xFF2A4F1F)
@@ -110,8 +110,8 @@ val surfaceContainerLightHighContrast = Color(0xFFE1E4DA)
 val surfaceContainerHighLightHighContrast = Color(0xFFD3D6CC)
 val surfaceContainerHighestLightHighContrast = Color(0xFFC5C8BE)
 
-val primaryDark = Color(0xFFA6D394)
-val onPrimaryDark = Color(0xFF13380A)
+val primaryDark = Color(0xFF151714)
+val onPrimaryDark = Color(0xFFD9E7D6)
 val primaryContainerDark = Color(0xFF2A4F1F)
 val onPrimaryContainerDark = Color(0xFFC1EFAE)
 val secondaryDark = Color(0xFFBBCBB1)
