@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">TDAD-App</string>
+    <!-- Day 1 -->
+    <string name="day_1">Day 1</string>
+    <string name="day_1_title">Introduction and Setup</string>
+    <string name="day_1_description">Get started with Android Studio and set up your development environment.</string>
+
+    <!-- Day 2 -->
+    <string name="day_2">Day 2</string>
+    <string name="day_2_title">Your First Android App</string>
+    <string name="day_2_description">Create a simple Hello World app and run it on an emulator or device.</string>
+
+    <!-- Day 3 -->
+    <string name="day_3">Day 3</string>
+    <string name="day_3_title">Layouts and Views</string>
+    <string name="day_3_description">Learn about LinearLayout, RelativeLayout, ConstraintLayout, and basic Views.</string>
+
+    <!-- Day 4 -->
+    <string name="day_4">Day 4</string>
+    <string name="day_4_title">Activities and Intents</string>
+    <string name="day_4_description">Understand Activities, their lifecycle, and how to navigate with Intents.</string>
+
+    <!-- Day 5 -->
+    <string name="day_5">Day 5</string>
+    <string name="day_5_title">RecyclerView</string>
+    <string name="day_5_description">Build lists using RecyclerView and learn about Adapters and ViewHolders.</string>
+
+    <!-- Day 6 -->
+    <string name="day_6">Day 6</string>
+    <string name="day_6_title">Fragments</string>
+    <string name="day_6_description">Use Fragments to build flexible and reusable UI components.</string>
+
+    <!-- Day 7 -->
+    <string name="day_7">Day 7</string>
+    <string name="day_7_title">Navigation Component</string>
+    <string name="day_7_description">Implement app navigation with the Navigation Component and Safe Args.</string>
+
+    <!-- Day 8 -->
+    <string name="day_8">Day 8</string>
+    <string name="day_8_title">ViewModel</string>
+    <string name="day_8_description">Use ViewModel to manage UI-related data in a lifecycle-conscious way.</string>
+
+    <!-- Day 9 -->
+    <string name="day_9">Day 9</string>
+    <string name="day_9_title">LiveData</string>
+    <string name="day_9_description">Observe data changes in your UI using LiveData.</string>
+
+    <!-- Day 10 -->
+    <string name="day_10">Day 10</string>
+    <string name="day_10_title">Data Binding</string>
+    <string name="day_10_description">Bind UI components to data sources declaratively using Data Binding.</string>
+
+    <!-- Day 11 -->
+    <string name="day_11">Day 11</string>
+    <string name="day_11_title">Room Database</string>
+    <string name="day_11_description">Persist local data using Room, an abstraction over SQLite.</string>
+
+    <!-- Day 12 -->
+    <string name="day_12">Day 12</string>
+    <string name="day_12_title">SQLite Basics</string>
+    <string name="day_12_description">Learn how to work with raw SQLite databases in Android.</string>
+
+    <!-- Day 13 -->
+    <string name="day_13">Day 13</string>
+    <string name="day_13_title">SharedPreferences</string>
+    <string name="day_13_description">Store simple key-value pairs using SharedPreferences.</string>
+
+    <!-- Day 14 -->
+    <string name="day_14">Day 14</string>
+    <string name="day_14_title">Jetpack Compose Intro</string>
+    <string name="day_14_description">Get introduced to Jetpack Compose for modern UI development.</string>
+
+    <!-- Day 15 -->
+    <string name="day_15">Day 15</string>
+    <string name="day_15_title">Compose Layouts</string>
+    <string name="day_15_description">Build user interfaces using Compose’s layout composables.</string>
+
+    <!-- Day 16 -->
+    <string name="day_16">Day 16</string>
+    <string name="day_16_title">State in Compose</string>
+    <string name="day_16_description">Handle state and events effectively in Jetpack Compose.</string>
+
+    <!-- Day 17 -->
+    <string name="day_17">Day 17</string>
+    <string name="day_17_title">Networking with Retrofit</string>
+    <string name="day_17_description">Use Retrofit to make network requests and handle API responses.</string>
+
+    <!-- Day 18 -->
+    <string name="day_18">Day 18</string>
+    <string name="day_18_title">REST API Integration</string>
+    <string name="day_18_description">Integrate with a real REST API and display the data in your app.</string>
+
+    <!-- Day 19 -->
+    <string name="day_19">Day 19</string>
+    <string name="day_19_title">JSON Parsing</string>
+    <string name="day_19_description">Parse JSON responses using Gson or Moshi libraries.</string>
+
+    <!-- Day 20 -->
+    <string name="day_20">Day 20</string>
+    <string name="day_20_title">Coroutines Basics</string>
+    <string name="day_20_description">Understand Kotlin Coroutines for asynchronous programming.</string>
+
+    <!-- Day 21 -->
+    <string name="day_21">Day 21</string>
+    <string name="day_21_title">Flow and LiveData</string>
+    <string name="day_21_description">Work with Flow and LiveData for reactive data streams.</string>
+
+    <!-- Day 22 -->
+    <string name="day_22">Day 22</string>
+    <string name="day_22_title">Dependency Injection</string>
+    <string name="day_22_description">Learn the basics of Dependency Injection in Android apps.</string>
+
+    <!-- Day 23 -->
+    <string name="day_23">Day 23</string>
+    <string name="day_23_title">Dagger-Hilt</string>
+    <string name="day_23_description">Implement DI using Hilt, the recommended library from Google.</string>
+
+    <!-- Day 24 -->
+    <string name="day_24">Day 24</string>
+    <string name="day_24_title">Firebase Setup</string>
+    <string name="day_24_description">Set up Firebase and connect your app to Firebase Console.</string>
+
+    <!-- Day 25 -->
+    <string name="day_25">Day 25</string>
+    <string name="day_25_title">Firebase Authentication</string>
+    <string name="day_25_description">Add user sign-in and sign-up with Firebase Authentication.</string>
+
+    <!-- Day 26 -->
+    <string name="day_26">Day 26</string>
+    <string name="day_26_title">Cloud Firestore</string>
+    <string name="day_26_description">Use Firestore to store and sync data in real-time.</string>
+
+    <!-- Day 27 -->
+    <string name="day_27">Day 27</string>
+    <string name="day_27_title">Push Notifications</string>
+    <string name="day_27_description">Integrate Firebase Cloud Messaging (FCM) to send push notifications.</string>
+
+    <!-- Day 28 -->
+    <string name="day_28">Day 28</string>
+    <string name="day_28_title">App Deployment</string>
+    <string name="day_28_description">Prepare your app for release and publish it on the Play Store.</string>
+
+    <!-- Day 29 -->
+    <string name="day_29">Day 29</string>
+    <string name="day_29_title">Testing and Debugging</string>
+    <string name="day_29_description">Write tests and debug your app using Android Studio tools.</string>
+
+    <!-- Day 30 -->
+    <string name="day_30">Day 30</string>
+    <string name="day_30_title">Final Project</string>
+    <string name="day_30_description">Build a final mini project that brings together everything you’ve learned.</string>
+</resources>
