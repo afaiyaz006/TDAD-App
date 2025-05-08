@@ -5,4 +5,6 @@ Thirty days of learning App.This app covers
 -loading resources
 -Settingup topbars
 
-Screenshots
+## Screenshots:
+![Screenshot-1](https://pixvid.org/images/2025/05/08/thirty-days-day.png)
+![Screenshot-2](https://pixvid.org/images/2025/05/08/thirty-days-night.png)
